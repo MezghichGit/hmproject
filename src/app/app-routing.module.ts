@@ -5,10 +5,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 const routes: Routes = [
 
    {
-    path: 'dashbaordPatient',
+    path: 'dashbaordPatienttest',
     loadChildren: () => import('./patient/patient.module').then(m => m.PatientModule)
   },
-
 
   {
     path:"home", component:NavbarComponent
