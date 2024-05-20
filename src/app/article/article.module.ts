@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { ArticleRoutingModule } from './article-routing.module';
 import { MainarticleComponent } from './mainarticle/mainarticle.component';
+import { AjoutArticleComponent } from './ajout-article/ajout-article.component';
 
 
 @NgModule({
   declarations: [
-    MainarticleComponent
+    MainarticleComponent,
+    AjoutArticleComponent
   ],
   imports: [
     CommonModule,
