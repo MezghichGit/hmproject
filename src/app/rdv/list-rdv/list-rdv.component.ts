@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './list-rdv.component.css'
 })
 export class ListRdvComponent {
+rdvs: any;
 
 }
