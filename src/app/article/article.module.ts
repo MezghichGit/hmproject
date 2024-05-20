@@ -3,14 +3,20 @@ import { CommonModule } from '@angular/common';
 
 import { ArticleRoutingModule } from './article-routing.module';
 import { MainarticleComponent } from './mainarticle/mainarticle.component';
-import { ListArticleComponent } from './list-article/list-article.component';
+import { listarticleComponent } from './list-article/list-article.component';
+
+import { AjoutArticleComponent } from './ajout-article/ajout-article.component';
+
+import { UpdateArticleComponent } from './update-article/update-article.component';
+
 
 
 @NgModule({
   declarations: [
     MainarticleComponent,
-    ListArticleComponent
-  ],
+    listarticleComponent,
+    AjoutArticleComponent,
+UpdateArticleComponent ],
   imports: [
     CommonModule,
     ArticleRoutingModule

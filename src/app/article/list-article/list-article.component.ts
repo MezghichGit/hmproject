@@ -7,14 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class listarticleComponent implements OnInit {
 
-  article!: article[];
+ // article!: article[];
   priceMax!   : number;
   p!:number;
  //article: any;
   
   constructor( ){}
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    
   }
   
   
