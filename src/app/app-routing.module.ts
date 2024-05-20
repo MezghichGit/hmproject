@@ -12,7 +12,11 @@ const routes: Routes = [
 
   {
     path:"home", component:NavbarComponent
+  },
+  {
+    path:"", component:NavbarComponent
   }
+  
  
 ];
 
