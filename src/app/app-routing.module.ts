@@ -5,8 +5,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 const routes: Routes = [
 
    {
-    path: 'dashbaordRdv',
-    loadChildren: () => import('./rdv/rdv.module').then(m => m.RdvModule)
+    path: 'dashbaordPatient',
+    loadChildren: () => import('./patient/patient.module').then(m => m.PatientModule)
   },
 
 
@@ -16,8 +16,8 @@ const routes: Routes = [
   {
     path:"", component:NavbarComponent
   }
-  
- 
+
+
 ];
 
 @NgModule({
