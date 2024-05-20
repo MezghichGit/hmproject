@@ -1,0 +1,45 @@
+<div class="container">
+    <h1 class="text-center text-success"> Liste Des Produits </h1>
+    
+    <form class="d-flex">
+      <!-- <input class="form-control me-2" type="number" name="price" aria-label="Search" [(ngModel)]="priceMax"> -->
+        <button class="btn btn-outline-success" type="">Search</button>
+      </form>
+          <table class="table table-primary"> 
+              
+              
+                  <tr>
+                
+                  <th scope="col">userId</th>
+                  <th scope="col">title</th>
+                  <th scope="col">price</th>
+                  <th scope="col">quantity</th>
+                  <th scope="col">like</th>
+                  <th scope="col">Actions</th>
+                </tr>
+  
+                
+  
+  
+  
+                <tbody *ngFor="let p of article">
+  
+                <tr  >
+             
+                <td>{{p.id}}</td>
+                <td>{{p.title}}</td>
+                <td>{{p.price}}</td>
+                <td>{{p.quantity}}</td>
+                <td>{{p.like}}</td>
+                <td>
+   
+                
+                
+                
+               
+              </td>
+              </tr>
+          
+          </tbody>
+          
+            </table>
