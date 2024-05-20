@@ -8,7 +8,10 @@ const routes: Routes = [
     path: 'dashbaordPatient',
     loadChildren: () => import('./patient/patient.module').then(m => m.PatientModule)
   },
-
+  {
+    path: 'dashbaordarticle',
+    loadChildren: () => import('./article/article.module').then(m => m.ArticleModule)
+  },
 
   {
     path:"home", component:NavbarComponent
