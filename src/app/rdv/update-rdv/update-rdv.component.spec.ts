@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddRDVComponent } from './add-rdv.component';
+import { UpdateRDVComponent } from './update-rdv.component';
 
-describe('AddRDVComponent', () => {
-  let component: AddRDVComponent;
-  let fixture: ComponentFixture<AddRDVComponent>;
+describe('UpdateRDVComponent', () => {
+  let component: UpdateRDVComponent;
+  let fixture: ComponentFixture<UpdateRDVComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AddRDVComponent]
+      declarations: [UpdateRDVComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(AddRDVComponent);
+    fixture = TestBed.createComponent(UpdateRDVComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
