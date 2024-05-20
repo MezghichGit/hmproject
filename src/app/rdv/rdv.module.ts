@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 
 import { RdvRoutingModule } from './rdv-routing.module';
 import { MainrdvComponent } from './mainrdv/mainrdv.component';
+import { ListRdvComponent } from '../list-rdv/list-rdv.component';
 
 
 
 @NgModule({
   declarations: [
-    MainrdvComponent
+    MainrdvComponent,
+    ListRdvComponent
   ],
   imports: [
     CommonModule,
