@@ -20,7 +20,7 @@ export class UpdateRDVComponent implements OnInit {
     this.activateRoute.params.subscribe((parms)=>{
       this.Ipp=parms['ipp'];
     })
-  
+
   }
   saveUpdateRdv(){
     let rdv :Rdv={
