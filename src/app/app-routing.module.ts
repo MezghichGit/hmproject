@@ -18,13 +18,8 @@ const routes: Routes = [
     loadChildren: () => import('./article/article.module').then(m => m.ArticleModule)
   },
 
-
-
   {
     path:"home", component:NavbarComponent
-  },
-  {
-    path:"", component:NavbarComponent
   }
 
 
