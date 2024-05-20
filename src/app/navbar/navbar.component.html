@@ -16,15 +16,14 @@
           routerLinkActive="active">Patients</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link"  routerLink="dashbaordarticle"
-          routerLinkActive="active">Articles</a>
-      </li>
-
-
-
+        
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Article</a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" routerLink="/ajoutArticle">Ajout D'un Article</a></li>
+        <li><a class="dropdown-item" routerLink="/listArticle">Liste des Articles</a></li>
+        </ul>
     </ul>
-
-  </div>
+    </div>
 </nav>
 
 <router-outlet></router-outlet>

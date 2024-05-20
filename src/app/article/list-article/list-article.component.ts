@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class listarticleComponent implements OnInit {
 
- // article!: article[];
+ //listarticles!:article[];
   priceMax!   : number;
   p!:number;
- //article: any;
+ articles: any;
   
   constructor( ){}
   ngOnInit(): void {
@@ -20,7 +20,7 @@ export class listarticleComponent implements OnInit {
   
  
   // ngOnInit(): void {
-  //   this.service1.getproduct().subscribe(data=>this.article=data);
+  //   this.service1.getarticle().subscribe(data=>this.article=data);
   // }
 }
     
