@@ -23,14 +23,9 @@ export class UpdateRDVComponent implements OnInit {
   
   }
   saveUpdateRdv(){
-    let rdv :Rdv={
-      Ipp:this.Ipp,
-      Nom:this.Nom,
-      Prenom:this.Prenom,
-      Service:this.Service,
-      DateRdv:this.DateRdv
+    
     }
-    alert("UPdate de IPP:"+this.Ipp +"Nom : "+this.Nom+"Prenom : "+ this.Prenom+"Date : "+this.DateRdv);
+    
   }
 
-}
+
