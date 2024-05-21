@@ -1,8 +1,8 @@
 export interface Rdv {
-    Ipp: string;
-    Nom: string;
-    Prenom: string;
-    Service: string;
-    DateRdv:string;
+    ipp: number;
+    nom: string;
+    prenom: string;
+    service: string;
+    dateRdv:string;
 }
 
