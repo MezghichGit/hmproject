@@ -19,7 +19,7 @@ const routes: Routes = [
        component: AddRDVComponent,
       },
       {
-        path: 'update',
+        path: 'update/:id',
        component: UpdateRDVComponent,
       }
     ]

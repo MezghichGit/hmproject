@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { UpdateRDVComponent } from './update-rdv/update-rdv.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
+import { ToastrModule } from 'ngx-toastr';
 
 
 @NgModule({
@@ -25,7 +26,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
     CommonModule,
     FormsModule,
-    RdvRoutingModule
+    RdvRoutingModule,
+    
+    
 
   ],
   schemas: [

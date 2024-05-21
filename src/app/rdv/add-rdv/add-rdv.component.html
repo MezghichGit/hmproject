@@ -1,26 +1,70 @@
-<h2 align="center">Add new RDV</h2>
+<div class="container">
+  <fieldset class="border p-2 border-secondary">
+    <h2 align="center">Nouveau Rendez-vous</h2>
 
-<form #RDVForm="ngForm" (ngSubmit)="addRDV(RDVForm)">
-  <div class="form-group">
-    <label for="IPP">IPP</label>
-    <input ngModel required name="IPP" type="text" class="form-control" id="IPP"  placeholder="IPP">
-  </div>
-  <div class="form-group">
-    <label for="name">Name</label>
-    <input ngModel required name="IPP" type="text" class="form-control" id="Name"  placeholder="Name">
-  </div>
-  <div class="form-group">
-    <label for="Prenom">Prenom</label>
-    <input ngModel required name="Prenom" type="text" class="form-control" id="Prenom"  placeholder="Prenom">
-  </div>
-  <div class="form-group">
-    <label for="Service">IPP</label>
-    <input ngModel required name="Service" type="text" class="form-control" id="Service"  placeholder="Service">
-  </div>
-  <div class="form-group">
-    <label for="DateRDV">DateRDV</label>
-    <input ngModel required name="DateRDV" type="date" class="form-control" id="DateRDV"  placeholder="DateRDV">
-  </div>
+    <form #RDVForm="ngForm" (ngSubmit)="addRDV(RDVForm.value)">
+      <div class="form-group mb-3">
+        <label class="form-label text-bold" for="IPP">IPP :</label>
+        <input
+          ngModel
+          required
+          name="ipp"
+          type="text"
+          class="form-control"
+          id="IPP"
+          placeholder="saisir IPP du patient"
+        />
+      </div>
+      <div class="form-group mb-3">
+        <label class="form-label" for="name">Nom du patient :</label>
+        <input
+          ngModel
+          required
+          name="nom"
+          type="text"
+          class="form-control"
+          id="Name"
+          placeholder="saisir le nom du patient"
+        />
+      </div>
+      <div class="form-group mb-3">
+        <label class="form-label" for="Prenom">Prénom du patient :</label>
+        <input
+          ngModel
+          required
+          name="prenom"
+          type="text"
+          class="form-control"
+          id="Prenom"
+          placeholder="saisir le prénom du patient"
+        />
+      </div>
+      <div class="form-group mb-3">
+        <label class="form-label" for="Service">Service :</label>
+        <input
+          ngModel
+          required
+          name="service"
+          type="text"
+          class="form-control"
+          id="Service"
+          placeholder="saisir le service"
+        />
+      </div>
+      <div class="form-group mb-3">
+        <label class="form-label" for="DateRDV">Date du Rendez-vous :</label>
+        <input
+          ngModel
+          required
+          name="dateRdv"
+          type="date"
+          class="form-control"
+          id="DateRDV"
+          placeholder="choisir la date du rendez-vous"
+        />
+      </div>
 
-  <button type="submit" class="btn btn-warning">Submit</button>
-</form>
+      <button type="submit" class="btn btn-primary">Enregistrer</button>
+    </form>
+  </fieldset>
+</div>

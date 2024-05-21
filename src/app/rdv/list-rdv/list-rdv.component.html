@@ -1,27 +1,47 @@
+<div *ngIf="rdvs.length == 0">
+  <h3 style="color: brown;">Il n'existe pas de rendez-vous!!!</h3>
+</div>
+<div *ngIf="rdvs.length > 0">
+  <h2 align="center" style="font-weight: bolder">
+    La liste des Rendez-vous
+    <span class="badge rounded-pill bg-danger">{{ rdvs && rdvs.length }}</span>
+  </h2>
 
-<h2 align="center"> Liste des RDV du service .....</h2>
-
-
-<table align="center" border="1" class="table">
-  <thead>
-    <tr>
-      <th>IPP</th>
-      <th>Nom</th>
-      <th>Prenom</th>
-      <th>Service</th>
-      <th>Date RDV</th>
-      
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let rdv of rdvs">
-      <td>{{rdv.ipp}}</td>
-      <td>{{rdv.nom}}</td>
-      <td>{{rdv.prenom}}</td>
-      <td>{{rdv.service}}</td>
-      <td>{{rdv.dateRdv}}</td>
-      <!-- <td><button class="btn btn-danger" (click)="deleteProvider(provider)">Supprimer</button></td> -->
-      <!-- <td><button class="btn btn-warning" (click)="updateProvider(provider)">Modifier</button></td> -->
-    </tr>
-  </tbody>
-</table>
+  <table
+    align="center"
+    border="1"
+    class="table table-secondary table-hover table-bordered"
+  >
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>IPP</th>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>Service</th>
+        <th>Date RDV</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let rdv of rdvs; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ rdv.ipp }}</td>
+        <td>{{ rdv.nom }}</td>
+        <td>{{ rdv.prenom }}</td>
+        <td>{{ rdv.service }}</td>
+        <td>{{ rdv.dateRdv }}</td>
+        <td>
+          <button
+            class="btn btn-danger"
+            style="margin-right: 5px"
+            (click)="deleteRDV(rdv)"
+          >
+            Supprimer
+          </button>
+          <button class="btn btn-warning" (click)="updateRDV(rdv)">Modifier</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

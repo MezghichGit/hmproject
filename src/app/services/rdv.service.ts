@@ -24,7 +24,7 @@ export class RdvService {
   {
     //const headers = new HttpHeaders({ Authorization: 'Bearer '+this.token});
    // return this.http.post<Provider>(environment.baseUrl+"/providers", provider,{headers});
-   return this.http.post<Rdv>(this.url+"/RDVs", rdv);
+   return this.http.post<Rdv>(this.url+"/RDVs",rdv);
   }
 
   deleteRdv(rdv:Rdv)
@@ -36,7 +36,7 @@ export class RdvService {
 
   updateRdv(rdv:Rdv)
   {
-    return this.http.put<Rdv>(this.url+"/RDVs/"+rdv.ipp, rdv);
+    return this.http.put<Rdv>(this.url+"/RDVs/"+rdv.ipp,rdv);
   }
 
   getRdvById(ipp:number)
