@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { Rdv } from '../../rdv';
+import { RdvService } from '../../services/rdv.service';
 
 @Component({
   selector: 'app-add-rdv',
@@ -7,20 +10,43 @@ import { Router } from '@angular/router';
   styleUrl: './add-rdv.component.css'
 })
 export class AddRDVComponent {
-  constructor(private router: Router) { }
+  constructor(private router: Router,private rdvService:RdvService,private toastr: ToastrService) { }
+
+
+
+  // Ajout un nouveau rendez-vous
 
   addRDV(RDVForm: any) {
-    //console.log(providerForm)
-    let RDV = {
-      IPP: RDVForm.IPP,
-      Nom: RDVForm.Nom,
-      Prenom: RDVForm.Prenom,
-      Service: RDVForm.Service,
-      DateRDV: RDVForm.DateRDV,
-      //dateCreateRDV: new Date()
+    
+    let RDV :Rdv = {
+      ipp: RDVForm.ipp,
+      nom: RDVForm.nom,
+      prenom: RDVForm.prenom,
+      service: RDVForm.service,
+      dateRdv:  RDVForm.dateRdv,
+      
     };
+  
+    
+
+    this.rdvService.addRdv(RDV).subscribe(
+      
+      data => {
+        
+        this.toastr.success('Ajout du rendez-vous avec succés');
+        this.router.navigate(["dashbaordRdv/list"]);
+
+      },
+     
+      error => {
+        this.toastr.error('Erreur lors de l\'ajout du rendez-vous!!!');
+        console.log(error)}
+      
+    );
   
 
 
   }
+
+ 
 }
