@@ -1,5 +1,5 @@
 export interface Rdv {
-    Ipp: string;
+    Ipp: number;
     Nom: string;
     Prenom: string;
     Service: string;
