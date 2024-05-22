@@ -1,19 +1,24 @@
 <p>Ajout patient</p>
-<form>
+<form #patientForm="ngForm" (ngSubmit)="addPatient(patientForm.value)" >
     <div class="form-group">
       <label for="nom">Nom</label>
-      <input type="nom" class="form-control" id="nom" aria-describedby="nom" placeholder="Enter nom">
+      <input ngModel name="nom"    class="form-control" id="nom" aria-describedby="nom" placeholder="Enter nom">
      
     </div>
     <div class="form-group">
         <label for="prenom">Prenom</label>
-        <input type="prenom" class="form-control" id="prenom" aria-describedby="prenom" placeholder="Enter prenom">
+        <input ngModel name="prenom"  type="text" class="form-control" id="prenom" aria-describedby="prenom" placeholder="Enter prenom">
        
       </div>
 
    <div class="form-group">
       <label for="cin">CIN</label>
-      <input type="cin" class="form-control" id="cin" aria-describedby="cin" placeholder="Enter cin">
+      <input ngModel name="cin"  type="text" class="form-control" id="cin" aria-describedby="cin" placeholder="Enter cin">
+     
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input ngModel name="phone"  type="text" class="form-control" id="phone" aria-describedby="phone" placeholder="Enter phone">
      
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>

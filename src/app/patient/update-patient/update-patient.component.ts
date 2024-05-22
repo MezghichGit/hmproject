@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { patient } from '../Patient';
+import { Patient } from '../../Models/patient';
 
 @Component({
   selector: 'app-update-patient',
@@ -23,10 +23,6 @@ export class UpdatePatientComponent {
 
   }
   saveUpdatePatient(){
-    let patient :patient={
-      Nom:this.Nom,
-      Prenom:this.Prenom,
-      cin:this.cin,
-    }
+     
   }
 }

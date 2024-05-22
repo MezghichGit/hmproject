@@ -12,6 +12,8 @@ import { UpdatePatientComponent } from './update-patient/update-patient.componen
 
 
 import { AddpatientComponent } from './addpatient/addpatient.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -33,7 +35,9 @@ import { AddpatientComponent } from './addpatient/addpatient.component';
   ],
   imports: [
     CommonModule,
-    PatientRoutingModule
+    PatientRoutingModule,
+    FormsModule,
+    HttpClientModule
   ]
 })
 export class PatientModule { }

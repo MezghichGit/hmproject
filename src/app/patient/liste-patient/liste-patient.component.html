@@ -4,26 +4,21 @@
     <thead>
       <tr>
         <th>ID</th>
-        <th>Name</th>
-        <th>Username</th>
-        <th>Email</th>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>Cin</th>
         <th>Phone</th>
       </tr>
     </thead>
     <tbody>
-      <tr >
-        <td>1</td>
-        <td>ahmed</td>
-        <td>ch</td>
-        <td>xxxx</td>
-        <td>224566</td>
-      </tr>
-      <tr >
-        <td>2</td>
-        <td>salah</td>
-        <td>ch</td>
-        <td>xxxx</td>
-        <td>2278566</td>
+      <tr *ngFor="let patient of patients">
+        <td> {{patient.id}} </td>
+        <td> {{patient.nom}} </td>
+        <td> {{patient.prenom}} </td>
+        <td>  {{patient.cin}} </td>
+        <td>  {{patient.phone}} </td>
+        <td>  <button class="btn btn-warning" >Modifier</button>  </td>
+        <td>   <button class="btn btn-danger" >Supprimer</button> </td>
       </tr>
     </tbody>
   </table>
